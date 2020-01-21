@@ -9,16 +9,13 @@ var app = express();
 app.use(bodyPasrer.urlencoded({extended: false}));
 app.use(bodyPasrer.json());
 
-
+myDict = {"49118284" : "2fd6b85077d8298aa71ac2f2c3", } //input new group_id bot_id pairs here
 console.log("server started on 8000");
 app.listen(8000);
 
-app.post('/main', (req, res)=>{
-		//console.log("time query");
-		//console.log(req.body); 
-		var bot_id = "2fd6b85077d8298aa71ac2f2c3"
-
-		//et user = req.session.user;
+app.post('/', (req, res)=>{
+		var group_id = req.body.group_id
+		var bot_id = myDict[group_id]
 		let body = "bot_id="+ bot_id +  "&text=The Lodge"
         
 	
@@ -29,7 +26,5 @@ app.post('/main', (req, res)=>{
       		//oReq.onload = function(){console.log(oReq.response);}
     		oReq.send(body);
 	    }
-
-
 		
 });
