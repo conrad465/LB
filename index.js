@@ -9,7 +9,7 @@ var app = express();
 app.use(bodyPasrer.urlencoded({extended: false}));
 app.use(bodyPasrer.json());
 
-myDict = {"49118284" : "2fd6b85077d8298aa71ac2f2c3", } //input new group_id bot_id pairs here
+myDict = {"49118284" : "2fd6b85077d8298aa71ac2f2c3", "55972616": "4209943fc15427996c6596f1ef"} //input new group_id bot_id pairs here
 console.log("server started on 8000");
 app.listen(8000);
 
