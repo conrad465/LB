@@ -18,7 +18,8 @@ app.post('/main', (req, res)=>{
 		//console.log(req.body); 
 		var bot_id = "2fd6b85077d8298aa71ac2f2c3"
 
-		//et user = req.session.user;
+		let user = req.body.group_id;
+		console.log(typeof(user));
 		let body = "bot_id="+ bot_id +  "&text=The Lodge"
         
 	
